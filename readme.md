@@ -2,7 +2,7 @@
 
 This is a naive implementation using RBF kernels of the auto-correlation function
 for a function that is nonuniformly sampled.
-Usage
+Usage:
 
 ```python
 import numpy as np
@@ -13,6 +13,6 @@ tt = np.linspace(0, 3, 20)  # time lags to evaluate auto-correlation at
 correlation = gautocorr(tt, t, x)
 ```
 
-For more involved example see `gautocorr.py`.
+For a more involved example see `gautocorr.py`.
 
 Requires `numpy` and `numba`.
