@@ -114,6 +114,7 @@ def example():
     c = gautocorr(tt, t1, x1)
 
     plt.plot(tt, c, '--', label='Gaussian auto-correlation', alpha=0.75)
+    plt.title('Nonuniformly sampled data')
     plt.legend()
     plt.xlim(-10, 100)
 
