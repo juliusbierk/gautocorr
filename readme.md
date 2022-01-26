@@ -1,6 +1,6 @@
 # Gaussian auto-correlation for evenly sampled data
 
-This is a naive implementation of the auto-correlation function
+This is a naive implementation using RBF kernels of the auto-correlation function
 for a function that is sampled unevenly.
 Usage
 
