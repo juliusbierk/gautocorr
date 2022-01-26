@@ -1,7 +1,7 @@
-# Gaussian auto-correlation for evenly sampled data
+# Gaussian auto-correlation for unevenly sampled data
 
 This is a naive implementation using RBF kernels of the auto-correlation function
-for a function that is sampled unevenly.
+for a function that is nonuniformly sampled.
 Usage
 
 ```python
