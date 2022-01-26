@@ -18,6 +18,25 @@ def binary(t, v, i1, i2):
 
 @nb.njit
 def gautocorr(tt, t, x, sigma=None, n_sigma=5):
+    """
+    Uses RBF kernel with distance `sigma`
+    to evaluate the (positive) auto-correlation function
+    for the function x(t) which can be sampled
+    unevenly.
+
+    Parameters
+    ----------
+    tt: Time lags to evaluate (positive numbers only)
+    t: Function variable (assumed to be increasing)
+    x: Function evaluated at `t`
+    sigma: Standard deviation of the RBF
+    n_sigma: Number of standard deviation to use in calculation
+
+    Returns
+    -------
+    Auto-correlation
+
+    """
     if sigma is None:
         sigma = np.mean(t[1:] - t[:-1])
     jsigma = n_sigma * sigma
