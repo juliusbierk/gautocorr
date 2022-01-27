@@ -56,7 +56,7 @@ def gautocorr(tt, t, x, sigma=None, n_sigma=5):
                 if dtij > jsigma:
                     break
 
-                w = np.exp(-(dt - tij)**2 / (2 * sigma))
+                w = np.exp(-(dt - tij)**2 / (2 * sigma**2))
                 corr[ti] += w * x[j] * x[i]
                 sw[ti] += w
     corr = corr / sw
