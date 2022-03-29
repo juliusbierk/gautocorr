@@ -2,7 +2,7 @@ import numpy as np
 import numba as nb
 
 
-@nb.njit
+@nb.njit(cache=True)
 def binary(t, v, i1, i2):
     m = i1
     while i1 < i2:
@@ -16,7 +16,7 @@ def binary(t, v, i1, i2):
     return m
 
 
-@nb.njit
+@nb.njit(cache=True)
 def gautocorr(tt, t, x, sigma=None, n_sigma=5):
     """
     Uses RBF kernel with distance `sigma`
