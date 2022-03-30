@@ -30,13 +30,14 @@ def gautocorr(tt, t, x, sigma=None, n_sigma=5):
     t: Function variable (assumed to be increasing)
     x: Function evaluated at `t`
     sigma: Standard deviation of the RBF
-    n_sigma: Number of standard deviation to use in calculation
+    n_sigma: Number of standard deviations to use in calculation
 
     Returns
     -------
     Auto-correlation
 
     """
+    assert (tt >= 0).all()
     if sigma is None:
         sigma = np.mean(t[1:] - t[:-1])
     jsigma = n_sigma * sigma
